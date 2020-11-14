@@ -29,4 +29,12 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-getDomainAvailability('goo13123aDad');
+
+document.querySelector('.search').addEventListener('click' , () => {
+  var domain = document.querySelector('.domain-name').value
+  if(domain==='')
+    alert('wtf')
+  else{
+    getDomainAvailability(domain);
+  } 
+})

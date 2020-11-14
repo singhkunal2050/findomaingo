@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: chocolate;
+  min-height: 100vh;
+}
+
+.search , .domain-name{
+  font-size: 2em;
+  padding: 10px 20px;
+  margin: 10px ;
+  border-radius: 16px;
+  outline: none;
+  border: none;
+}
+
+.search{
+  cursor: pointer;
+  transition: ease-in-out 400ms;
+}
+
+.search:hover{
+  background: rgb(255, 170, 170);
+}
