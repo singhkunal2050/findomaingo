@@ -1,0 +1,20 @@
+{
+  "name": "findomaingo",
+  "version": "1.0.0",
+  "description": "- generate random cool names \r - use nouns and adjective combo \r - use web scraping with js along side headless browser\r - Get data and check domain availability \r - Give User Options to go with the domain OR skip to next \r -",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhkunal2050/findomaingo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhkunal2050/findomaingo/issues"
+  },
+  "homepage": "https://github.com/singhkunal2050/findomaingo#readme"
+}

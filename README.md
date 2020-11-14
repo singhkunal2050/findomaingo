@@ -7,4 +7,5 @@
 - use web scraping with js along side headless browser
 - Get data and check domain availability 
 - Give User Options to go with the domain OR skip to next 
+-  using puppeteer
 -  
