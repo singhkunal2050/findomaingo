@@ -5,7 +5,7 @@ async function getDomainAvailability(domain){
   const browser = await pup.launch()
   const page = await browser.newPage()
   await page.goto(url)
-  await sleep(3000);
+  // await sleep(3000);
   // getting elem by xpath .. rwturns an array whose first item is stored using destructuring 
   const [elem] = await page.$x('//*[@id="search-app"]/div/div/div[2]/div/div/div/div/div[2]/div[1]/div/span')
   const op = await elem.getProperty('innerText');
@@ -19,4 +19,4 @@ function sleep(ms) {
 }
 
 
-getDomainAvailability('royalkunal');
+getDomainAvailability('google');
