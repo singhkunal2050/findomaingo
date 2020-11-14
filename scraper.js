@@ -2,9 +2,8 @@ const pup = require('puppeteer')
 
 async function getDomainAvailability(domain){
   let url = `https://in.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck=${domain}`
-
+  const browser = await pup.launch()
   try{
-    const browser = await pup.launch()
     const page = await browser.newPage()
     await page.goto(url)
     // await sleep(3000);
@@ -16,12 +15,12 @@ async function getDomainAvailability(domain){
     if(parsedop.includes('is taken'))
       console.log('Gone :(');
     else
-      console.log(`Yayyyyy :( ${url}`);
+      console.log(`Yayyyyy :} ${url}`);
     browser.close();
   }catch(e){
-    console.error(`Exception Occured :: ${e}`)
-    if(browser!=undefined)
-     browser.close();
+    // console.error(`Exception Occured :: ${e}`)
+    console.log('Something Went Wrong!');
+    browser.close();
   }
 
 }
