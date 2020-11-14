@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/singhkunal2050/findomaingo/issues"
   },
-  "homepage": "https://github.com/singhkunal2050/findomaingo#readme"
+  "homepage": "https://github.com/singhkunal2050/findomaingo#readme",
+  "dependencies": {
+    "puppeteer": "^5.4.1"
+  }
 }
