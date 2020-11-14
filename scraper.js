@@ -12,7 +12,11 @@ async function getDomainAvailability(domain){
     const [elem] = await page.$x('//*[@id="search-app"]/div/div/div[2]/div/div/div/div/div[2]/div[1]/div/span')
     const op = await elem.getProperty('innerText');
     const parsedop = await op.jsonValue();
-    console.log(parsedop);
+    
+    if(parsedop.includes('is taken'))
+      console.log('Gone :(');
+    else
+      console.log(`Yayyyyy :( ${url}`);
     browser.close();
   }catch(e){
     console.error(`Exception Occured :: ${e}`)
