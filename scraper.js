@@ -35,4 +35,4 @@ async function getDomainAvailability(domain){
 //   } 
 // })
 
-getDomainAvailability('domain');
+getDomainAvailability('domainforksr');

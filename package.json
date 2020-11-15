@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/singhkunal2050/findomaingo#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "puppeteer": "^5.4.1"
   },
   "devDependencies": {}
