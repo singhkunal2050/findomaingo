@@ -4,7 +4,8 @@
   "description": "- generate random cool names \r - use nouns and adjective combo \r - use web scraping with js along side headless browser\r - Get data and check domain availability \r - Give User Options to go with the domain OR skip to next \r -",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify scraper.js -o bundle.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,5 @@
   "dependencies": {
     "puppeteer": "^5.4.1"
   },
-  "devDependencies": {
-    "browserify": "^17.0.0"
-  }
+  "devDependencies": {}
 }

@@ -1,5 +1,7 @@
 const pup = require('puppeteer')
 
+// import pup from './node_modules/puppeteer'
+
 async function getDomainAvailability(domain){
   let url = `https://in.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck=${domain}`
   const browser = await pup.launch()
@@ -25,16 +27,12 @@ async function getDomainAvailability(domain){
 
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+// document.querySelector('.search').addEventListener('click' , () => {
+//   var domain = document.querySelector('.domain-name').value
+//   if(domain==='')
+//     alert('wtf')
+//   else{
+//   } 
+// })
 
-
-document.querySelector('.search').addEventListener('click' , () => {
-  var domain = document.querySelector('.domain-name').value
-  if(domain==='')
-    alert('wtf')
-  else{
-    getDomainAvailability(domain);
-  } 
-})
+getDomainAvailability('domain');
