@@ -27,12 +27,4 @@ async function getDomainAvailability(domain){
 
 }
 
-// document.querySelector('.search').addEventListener('click' , () => {
-//   var domain = document.querySelector('.domain-name').value
-//   if(domain==='')
-//     alert('wtf')
-//   else{
-//   } 
-// })
-
 getDomainAvailability('domainforksr');
