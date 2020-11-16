@@ -27,4 +27,4 @@ async function getDomainAvailability(domain){
 
 }
 
-getDomainAvailability('domainforksr');
+// getDomainAvailability('domainforksr');
