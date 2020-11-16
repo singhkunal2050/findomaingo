@@ -4,28 +4,28 @@ const pup = require('puppeteer')
 const express = require('express')
 
 const app = express()
-const port = process.env.PORT || 2324 
+const port = process.env.PORT || 2324
 
-app.get('/' , (req , res) =>{
+app.get('/', (req, res) => {
   res.send(`<h2> Heyya </h2>`)
 
 })
 
-app.get('/api/:domname', function (req, res) {
-  getDomainAvailability(req.params.domname)
-  res.send('Request for :: ' + req.params.domname)
+app.get('/api/:domname', async function (req, res) {
+  let result = await getDomainAvailability(req.params.domname)
+  res.send('Request for :: ' + req.params.domname + 'Response is :: ' + result )
 })
 
-app.listen(port , ()=>{
+app.listen(port, () => {
   console.log('I was hit!!')
 })
 
 
 
-async function getDomainAvailability(domain){
+async function getDomainAvailability(domain) {
   let url = `https://in.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck=${domain}`
   const browser = await pup.launch()
-  try{
+  try {
     const page = await browser.newPage()
     await page.goto(url)
     // await sleep(3000);
@@ -33,13 +33,16 @@ async function getDomainAvailability(domain){
     const [elem] = await page.$x('//*[@id="search-app"]/div/div/div[2]/div/div/div/div/div[2]/div[1]/div/span')
     const op = await elem.getProperty('innerText');
     const parsedop = await op.jsonValue();
-    
-    if(parsedop.includes('is taken'))
+
+    if (parsedop.includes('is taken')) {
       console.log('Gone :(');
-    else
+      return 'Gone';
+    } else {
       console.log(`Yayyyyy :} ${url}`);
+      return `Yayyyyy :} ${url}`;
+    }
     browser.close();
-  }catch(e){
+  } catch (e) {
     // console.error(`Exception Occured :: ${e}`)
     console.log('Something Went Wrong!');
     browser.close();
