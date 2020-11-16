@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/:domname', async function (req, res) {
   let result = await getDomainAvailability(req.params.domname)
-  res.send('Request for :: ' + req.params.domname + 'Response is :: ' + result )
+  res.send('Request for :: ' + req.params.domname + ' Response is :: ' + result )
 })
 
 app.listen(port, () => {
@@ -38,8 +38,8 @@ async function getDomainAvailability(domain) {
       console.log('Gone :(');
       return 'Gone';
     } else {
-      console.log(`Yayyyyy :} ${url}`);
-      return `Yayyyyy :} ${url}`;
+      console.log(`${url}`);
+      return `<a>${url}</a>`;
     }
     browser.close();
   } catch (e) {
