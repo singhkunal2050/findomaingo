@@ -9,3 +9,8 @@
 - Give User Options to go with the domain OR skip to next 
 -  using puppeteer
 -  
+
+
+## Task in hand 
+
+- Add Herouko dependency to get the api working
